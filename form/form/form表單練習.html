@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <Script>
+        var n = new Array(5)
+        function changeName(str) {
+            if (str!=" ") {
+                n[0]="姓名: "+str
+            document.f1.change.placeholder =n.join('')
+            }
+        }
+
+        function chGender(str) {
+             if (str!=" ") {
+                n[1]=" 性別:"+str
+            document.f1.change.placeholder =n.join('')
+            }
+        }
+
+        function chAge(str)
+        {
+            if(str!="")
+            {
+                n[2]=" 年齡:"+str
+                document.f1.change.placeholder=n.join('')
+            }
+        }
+
+        function checkPwLgh(str) {
+            if (str.length!=6)
+                n[3]=" 密碼至少要6個字元 "
+
+                document.f1.change.placeholder=n.join('')
+            
+        }
+        function checkRetype(str) {
+            if (document.f1.pw.value==document.f1.retypePw.value) 
+                n[3]=" 密碼正確 "
+            else 
+                n[3]=" 密碼不合 "
+                document.f1.change.placeholder=n.join('')
+
+            }    
+        function chClass(str) {
+             if (str!=" ") {
+                n[4]=" 班級:"+str
+            document.f1.change.placeholder =n.join('')
+            }
+            }
+    </Script>
+
+</head>
+<body>
+    <form name="f1">
+        <div class="form-group row">
+            <label for="output" class="col-sm-2 col-form-label">輸出結果</label>
+            <div class="col-sm-10">
+                <input type="text" name="change" class="form-control" id="output" placeholder="" readonly>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">姓名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="chName" onblur="changeName(this.value)" id="name">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="boy girl" class="col-form-label col-sm-2 float-sm-left">性別</label>
+            <div class="form-check">
+                <input type=radio  name=gender onBlur="chGender(this.value)" id="boy" value="男生">
+                <label class="form-check-label">男生</label>
+            </div>
+            <div class="form-check">
+                <input type=radio name=gender onBlur="chGender(this.value)" id="girl" value="女生">
+                <label class="form-check-label">女生</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="age" class="col-sm-2 col-form-label">年齡</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="changeAge" id="age" onblur="chAge(this.value)">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label">輸入密碼:</label>
+            <div class="col-sm-10">
+                <input type="password" name="pw" class="form-control" onBlur="checkPwLgh(this.value)" id="password">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="repassword" class="col-sm-2 col-form-label">重新輸入:</label>
+            <div class="col-sm-10">
+                <input type="password" name="retypePw" class="form-control" onBlur="checkRetype(this.value)" id="repassword">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="class" class="col-sm-2 col-form-label">班級</label>
+            <div class="col-sm-10">
+                <select class="form-control " name="changeClass" id="class" onblur="chClass(this.value)">
+                    <option>請選班級</option>
+                    <option>資工1A</option>
+                    <option>資工2A</option>
+                    <option>資工3A</option>
+                    <option>資工4A</option>
+                    <option>資工1B</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
