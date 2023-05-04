@@ -1,0 +1,16 @@
+.bgimage{
+	background-image: url(../images/tata.jpeg);
+	background-position: center center;
+	background-size: cover;
+	height: 200px;
+}
+div.services{
+	padding-top: 90px;
+}
+.footer{
+	height: 50px;
+	margin: 0 auto;
+	font-size: 30px;
+	text-align: center;
+	background-color:#98afe4;
+}
