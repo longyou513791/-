@@ -1,0 +1,40 @@
+<% include header %>
+<% var total=0; %>
+   <% if (entries.length) { %>
+      <% entries.forEach(function(entry) { %>
+         <div class="panel panel-default">
+            <div class="panel-body">
+               <%= entry.products %> 
+               <%= entry.count %>  
+               <nobr>個</nobr>
+               <a href="/cart" class="btn btn-xs btn-danger pull-right delbtn">刪除</a>
+               <a href="/cart" class="btn btn-xs btn-warning pull-right editbtn">編輯</a>
+               <div class="text-muted pull-right">
+                  金額: <%= entry.spend %>
+                  <% total=total+entry.spend; %>
+               </div>
+            </div>
+         </div>
+         <% %>
+      <% }) %>
+      <div>
+         總金額: <%= total %>
+      </div>
+      <form method="post" role="form">
+         <label>支付方式: </label>
+         <input type="radio" name="ra" value="cash">
+         <label>
+            貨到付款
+         </label>
+         <div class="form-group">
+            <input type="submit" value="結帳" class="btn btn-primary">
+         </div>
+         <a href="/" class="btn btn-primary">
+            返回
+         </a>
+      </form>
+        
+   <% } else { %>
+      <h2>購物車沒有東西 <a href="/new-entry">買</a></h2>
+   <% } %>
+<% include footer %>

@@ -1,0 +1,40 @@
+<% include header %>
+<h2>購物品項</h2>
+<form method="post" role="form">
+  <div class="form-group col-6 col-sm-3">
+        <select class="form-control " name="products" required>
+            <option value="" selected>請選物品</option>
+            <option value="iphone">iphone</option>
+            <option value="time">小米手錶</option>
+            <option value="earrings">耳環</option>
+            <option value="energe">小米行動電源</option>
+            <option value="earphone">耳機</option>
+            <option value="wind">吹風機</option>
+        </select>
+    </div>
+<div class="form-group col-6 col-sm-3">
+  <input type="text" class="form-control" id="count" name="count" required>
+</div>
+  <div class="form-group col-auto">
+    <input type="submit" value="加入購物車" class="btn btn-primary">
+    <a href="/" class="btn btn-primary">
+    返回
+ </a>
+  </div>
+  
+</form>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><img src="./images/iphone.jpg" width=200px height=200px><p>iphone $32500</p></td>
+        <td><img src="./images/1.jpg" width=200px height=200px><p>小米手錶 $625</p></td>
+        <td><img src="./images/earrings.jpg" width=200px height=200px><p>耳環 $400</p></td>
+        <td><img src="./images/3.jpg" width=200px height=200px><p>小米行動電源 $799</p></td>
+        <td><img src="./images/4.jpg" width=200px height=200px><p>耳機 $899</p></td>
+        <td><img src="./images/2.jpg" width=200px height=200px><p>吹風機 $799</p></td>
+       </tr>
+    </tbody>
+  </table>
+
+
+<% include footer %>
