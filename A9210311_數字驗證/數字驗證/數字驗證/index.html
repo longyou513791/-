@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>var m = new Array()
+		for (var i = 0; i < 4; i++) {
+
+		var num = Math.floor(Math.random() * 10);
+		
+		var imgurl=[
+			'./images/0.png',
+			'./images/1.png',
+			'./images/2.png',
+			'./images/3.png',
+			'./images/4.png',
+			'./images/5.png',
+			'./images/6.png',
+			'./images/7.png',
+			'./images/8.png',
+			'./images/9.jpg',
+		];
+		
+		document.write('<img src="'+imgurl[num]+'" style="height: 50px;">');
+		m[i] = num;
+			
+	}
+	
+		function check() {
+			if (document.f1.passwd.value == m.join(''))
+                alert("輸入正確");
+			else
+                alert("輸入錯誤");
+		}
+	</script>
+</head>
+<body>
+	<Form name="f1">
+	請輸入上圖的數字
+	<input type=text name="passwd" id="passwd">
+	<input type=button value="確定" onclick="check()">
+
+	</Form>
+</body>
+</html>
