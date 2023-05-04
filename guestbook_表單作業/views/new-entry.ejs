@@ -1,0 +1,42 @@
+<%- include('header'); -%>
+<h2>輸入資料</h2>
+<form method="post" role="form">
+
+  <div class="form-group">
+    <label for="title">姓名</label>
+    <input type="text" class="form-control" id="name" 
+    name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="boy girl">性別</label>
+        <input type=radio  name=gender id="boy" value="男生">
+        <label for="boy">男生</label>
+        <input type=radio name=gender  id="girl"value="女生">
+        <label for="girl">女生</label>
+  </div>
+
+  <div class="form-group">
+    <label for="age">年齡</label>
+    <input type="number" class="form-control" id="age" 
+    name="age" required>
+  </div>
+
+  <div class="form-group">
+    <label for="class">班級</label>
+        <select class="form-control " name="class" id="class">
+            <option>請選班級</option>
+            <option>資工1A</option>
+            <option>資工2A</option>
+            <option>資工3A</option>
+            <option>資工4A</option>
+            <option>資工4B</option>
+        </select>
+    </div>
+</div>
+
+  <div class="form-group">
+    <input type="submit" value="Post entry" class="btn btn-primary">
+  </div>
+</form>
+<%- include('footer'); -%>
